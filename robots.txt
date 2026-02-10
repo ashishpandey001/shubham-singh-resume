@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shubham-singh-resume.vercel.app/sitemap.xml
