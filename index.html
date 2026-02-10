@@ -174,7 +174,7 @@
             color: #2c2c2c;
         }
 
-        /* Download button */
+        /* Download button - desktop */
         .download-btn {
             position: fixed;
             top: 20px;
@@ -193,6 +193,14 @@
 
         .download-btn:hover {
             background: #333;
+        }
+
+        .download-btn .btn-icon {
+            display: none;
+        }
+
+        .download-btn .btn-text {
+            display: inline;
         }
 
         /* Print styles */
@@ -229,10 +237,26 @@
             }
 
             .download-btn {
-                position: static;
+                position: fixed;
+                bottom: 24px;
+                right: 20px;
+                top: auto;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .download-btn .btn-icon {
                 display: block;
-                width: 100%;
-                margin-bottom: 16px;
+            }
+
+            .download-btn .btn-text {
+                display: none;
             }
         }
     </style>
@@ -420,7 +444,10 @@
 
     </div>
 
-    <button class="download-btn" onclick="window.print()">Download as PDF</button>
+    <button class="download-btn" onclick="window.print()">
+        <span class="btn-text">Download as PDF</span>
+        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </button>
 
 </body>
 </html>
