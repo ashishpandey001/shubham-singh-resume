@@ -189,10 +189,13 @@
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
             transition: background 0.2s ease;
             z-index: 100;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .download-btn:hover {
             background: #333;
+            color: #ffffff;
         }
 
         .download-btn .btn-icon {
@@ -444,34 +447,10 @@
 
     </div>
 
-    <button class="download-btn" id="downloadBtn">
+    <a class="download-btn" href="./Shubham_Singh_Resume.pdf" download="Shubham_Singh_Resume.pdf">
         <span class="btn-text">Download as PDF</span>
         <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-    </button>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
-    <script>
-        document.getElementById('downloadBtn').addEventListener('click', function () {
-            var btn = this;
-            btn.style.display = 'none';
-
-            var element = document.querySelector('.page');
-            var opt = {
-                margin:       [10, 10, 10, 10],
-                filename:     'Shubham_Singh_Resume.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2, useCORS: true },
-                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
-            };
-
-            html2pdf().set(opt).from(element).save().then(function () {
-                btn.style.display = '';
-            }).catch(function () {
-                btn.style.display = '';
-            });
-        });
-    </script>
+    </a>
 
 </body>
 </html>

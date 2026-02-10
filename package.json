@@ -1,0 +1,21 @@
+{
+  "name": "shubham-resume",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:pdf": "tectonic resume.tex -o . && mv resume.pdf Shubham_Singh_Resume.pdf && echo 'PDF generated: Shubham_Singh_Resume.pdf'",
+    "build": "npm run build:pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashishpandey001/shubham-singh-resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashishpandey001/shubham-singh-resume/issues"
+  },
+  "homepage": "https://github.com/ashishpandey001/shubham-singh-resume#readme",
+  "description": ""
+}
